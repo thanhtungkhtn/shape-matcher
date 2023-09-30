@@ -1,0 +1,29 @@
+.shape {
+  width: 100px;
+  height: 100px; 
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Circle shape */
+.shape.circle {
+  border-radius: 50%;
+}
+
+/* Rectangle shape */
+.shape.rectangle {
+  border-radius: 10px;
+}
+
+/* Flipped shape */
+.shape.flipped {
+  background-color: #4caf50;
+  color: white;
+  pointer-events: none;
+}

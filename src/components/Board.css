@@ -1,0 +1,11 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px); /* Adjust the cell width as needed */
+  gap: 10px; /* Adjust the gap between cells */
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
