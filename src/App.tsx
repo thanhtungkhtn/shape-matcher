@@ -21,12 +21,15 @@ class App extends Component<{}, State> {
   }
 
   initializeBoard(rows: number, cols: number): Shape[][] {
-    const shapes = ['circle', 'rectangle', 'circle', 'rectangle'];
+    const shapes = ['circle', 'rectangle', 'triangle', 'circle', 'rectangle', 'triangle'];
     let board: Shape[][] = [];
 
     for (let i = 0; i < rows; i++) {
       let row: Shape[] = [];
       for (let j = 0; j < cols; j++) {
+        if (shapes.length === 0) {
+          shapes.push('circle', 'rectangle', 'triangle'); // Reset the shapes if exhausted
+        }
         const randomIndex = Math.floor(Math.random() * shapes.length);
         const shape = shapes.splice(randomIndex, 1)[0];
         row.push({ shape, isFlipped: false });
@@ -61,7 +64,7 @@ class App extends Component<{}, State> {
           firstSelected.isFlipped = false;
           selectedShape.isFlipped = false;
           this.setState({ firstSelected: null });
-        }, 1000);
+        }, 500);
       }
     }
   };

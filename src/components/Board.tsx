@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Cell from './Cell';
 import './Board.css';
+import Cell from './Cell';
 import { Shape } from '../types';
 
 interface BoardProps {
